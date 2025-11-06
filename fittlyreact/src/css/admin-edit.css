@@ -1,0 +1,31 @@
+.admin-edit .container { max-width: 1100px; margin: 36px auto; padding: 0 20px 40px; }
+.edit-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.edit-head .left { display: flex; align-items: center; gap: 10px; }
+.edit-head h1 { font-size: 22px; margin: 0; font-weight: 800; }
+.card { border: 1px solid #eee; background: #fff; border-radius: 12px; padding: 14px; margin-bottom: 14px; }
+.card h2 { margin: 0 0 10px; font-size: 16px; font-weight: 800; }
+.form-row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.form-row label { font-size: 13px; color: #666; }
+.form-row input, .form-row select, .form-row textarea { height: 40px; border: 1px solid #e6e9f2; border-radius: 10px; padding: 0 10px; }
+.form-row textarea { height: 120px; }
+.split-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.summary { margin-top: 8px; color: #333; }
+.thumb-large { width: 100%; max-width: 360px; border-radius: 12px; border: 1px solid #eee; margin-top: 8px; }
+.img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; }
+.img-item { border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: #fff; padding: 6px; display: grid; gap: 6px; }
+.img-item img { width: 100%; height: 110px; object-fit: cover; border-radius: 8px; }
+.mini { padding: 6px 8px; border-radius: 8px; border: 1px solid #e6e9f2; background: #f5f7ff; font-weight: 700; cursor: pointer; }
+.mini.danger { background: #ffe8e8; color: #7a1a1a; }
+.var-grid { width: 100%; border-collapse: collapse; }
+.var-grid th, .var-grid td { border-bottom: 1px solid #f0f2f7; padding: 8px 10px; text-align: left; }
+.var-grid input { width: 100%; height: 36px; border: 1px solid #e6e9f2; border-radius: 8px; padding: 0 8px; }
+.bottom-actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
+.btn { padding: 10px 12px; border-radius: 10px; border: 1px solid #e6e9f2; background: #f5f7ff; color: #1f2a44; font-weight: 700; cursor: pointer; }
+.btn:hover { background: #e9edff; }
+.btn.primary { background: #e7f5ff; color: #0b7285; border-color: #c5e5f5; }
+.btn.primary:hover { background: #dbeeff; }
+.btn.danger { background: #ffe8e8; color: #7a1a1a; }
+.btn.danger:hover { background: #ffdcdc; }
+.muted { color: #777; }
+.error { color: #b02a37; font-weight: 700; }

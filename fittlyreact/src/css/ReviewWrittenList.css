@@ -1,0 +1,139 @@
+.review-written-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.written-review-item {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.written-review-item .review-rating {
+  display: flex;
+  align-items: center;
+  color: #f59e0b;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.written-review-item .review-score {
+  margin-left: 0;
+  font-weight: 600;
+  color: #111;
+}
+
+.written-review-item .review-date {
+  margin-left: 8px;
+  color: #777;
+  font-size: 14px;
+}
+
+.written-review-item .review-extra {
+  margin: 4px 0;
+}
+
+.written-review-item .review-option {
+  display: inline-block;
+  background: #f6f7f9;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #444;
+}
+
+.written-review-item .review-option .label {
+  font-size: 13px;
+  color: #777;
+  margin-right: 4px;
+}
+
+.review-image-row {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.review-image-row img {
+  max-width: 160px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: default !important;
+  transition: none !important;
+}
+
+.written-review-item .review-comment {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 6px;
+}
+
+@media (max-width: 1024px) {
+  .written-review-item {
+    padding: 16px;
+  }
+
+  .review-image-row img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .written-review-item {
+    padding: 14px;
+    border-radius: 10px;
+  }
+
+  .written-review-item .review-rating {
+    font-size: 15px;
+  }
+
+  .written-review-item .review-option {
+    font-size: 12.5px;
+    padding: 5px 8px;
+  }
+
+  .review-image-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .review-image-row img {
+    flex: 1 1 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+    height: auto;
+    border-radius: 6px;
+  }
+
+  .written-review-item .review-comment {
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .written-review-item {
+    padding: 12px;
+  }
+
+  .written-review-item .review-option {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .review-image-row img {
+    flex: 1 1 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+  }
+
+  .written-review-item .review-comment {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,239 @@
+:root{
+  --sticky-offset: 96px;
+}
+
+.pd-wrap.container {
+  max-width: 1200px;
+  margin: 24px auto 80px;
+  padding: 0 16px;
+}
+
+.pd-back {
+  background: none;
+  border: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  color: #666;
+}
+
+.pd-loading,
+.pd-error {
+  padding: 48px 0;
+  text-align: center;
+  color: #444;
+}
+.pd-error-raw {
+  margin-top: 8px;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 12px;
+  border-radius: 8px;
+  overflow: auto;
+  max-height: 320px;
+}
+
+.pd-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .pd-grid { grid-template-columns: 1fr; }
+}
+
+.pd-gallery .pd-main {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: #f6f6f6;
+  border-radius: 16px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.pd-gallery .pd-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pd-thumbs {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+.pd-thumb {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+}
+.pd-thumb img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+.pd-thumb.active { border-color: #111; }
+.pd-brand { font-size: 13px; color: #888; letter-spacing: .2px; }
+.pd-name { margin: 4px 0 16px; font-size: 22px; line-height: 1.35; }
+.pd-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.pd-sale { font-size: 22px; font-weight: 700; }
+.pd-original { font-size: 14px; color: #aaa; text-decoration: line-through; }
+.pd-badge { font-size: 13px; padding: 2px 6px; border-radius: 6px; background: #ffecec; color: #c0392b; }
+
+.pd-meta {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  margin: 16px 0;
+}
+.pd-meta-row { display: flex; gap: 12px; font-size: 14px; line-height: 28px; }
+.pd-meta-row .key { width: 90px; color: #777; }
+.pd-meta-row .val { color: #333; }
+.tagchip { margin-right: 8px; }
+.pd-purchase .label { font-size: 13px; color: #666; margin-bottom: 6px; }
+.pd-size .sizes { display: flex; flex-wrap: wrap; gap: 8px; }
+.size-chip {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+.size-chip.active { border-color: #111; background: #111; color: #fff; }
+.size-chip:disabled { opacity: .4; text-decoration: line-through; cursor: not-allowed; }
+.pd-qty { margin-top: 12px; }
+.qty-box { display: inline-flex; align-items: center; border: 1px solid #ddd; border-radius: 10px; overflow: hidden; }
+.qty-box button { width: 36px; height: 36px; border: none; background: #fafafa; cursor: pointer; }
+.qty-box input { width: 54px; height: 36px; border: none; text-align: center; outline: none; }
+.stock-hint { margin-top: 6px; font-size: 12px; color: #666; }
+.pd-actions { display: flex; gap: 10px; margin-top: 16px; }
+.btn { flex: none; height: 44px; padding: 0 18px; border-radius: 12px; border: none; background: #111; color: #fff; font-weight: 600; cursor: pointer; }
+.btn.outline { background: #fff; color: #111; border: 1px solid #111; }
+.swatches { display: flex; gap: 6px; align-items: center; }
+.swatch { width: 14px; height: 14px; border-radius: 50%; border: 1px solid rgba(0,0,0,.15); }
+button.swatch { appearance: none; padding: 0; background: transparent; cursor: pointer; display: inline-block; }
+button.swatch:focus-visible { outline: 2px solid #111; outline-offset: 2px; }
+.pd-tabs-wrap { margin-top: 28px; }
+.pd-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background: #f7f7f9;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+
+  position: sticky;
+  top: var(--sticky-offset);
+  z-index: 50;
+  backdrop-filter: blur(2px);
+}
+.pd-tab {
+  border: 0;
+  background: transparent;
+  padding: 12px 10px;
+  font-weight: 700;
+  color: #666;
+  cursor: pointer;
+}
+.pd-tab.active {
+  background: #fff;
+  color: #111;
+  box-shadow: inset 0 -2px 0 #111;
+}
+.pd-tabpanel {
+  border: 1px solid #e5e7eb;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 16px;
+  background: #fff;
+}
+
+.pd-spec-table { display: grid; grid-template-columns: 1fr; gap: 6px; margin-bottom: 12px; }
+.pd-spec-row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; font-size: 14px; }
+.pd-spec-key { color: #666; }
+.pd-spec-val { color: #222; }
+.pd-benefit-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0a2a66;
+  color: #fff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 12px 0 18px;
+}
+.banner-icon { font-size: 20px; line-height: 1; }
+.banner-title { font-weight: 800; }
+.banner-desc { font-size: 13px; opacity: .95; }
+.pd-detail-images { display: grid; gap: 12px; }
+.pd-detail-images img { width: 100%; display: block; border-radius: 8px; }
+.pd-detail-html { color: #222; line-height: 1.7; }
+.pd-detail-fallback h3 { font-size: 28px; margin: 0 0 8px; }
+.pd-detail-fallback p { margin: 0; color: #333; }
+.pd-size-tab .pd-size-list { list-style: none; padding: 0; margin: 0; }
+.pd-size-tab .pd-size-list li { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
+.pd-size-tab .sz { font-weight: 700; }
+.pd-size-tab .st.ok { color: #22863a; }
+.pd-size-tab .st.oos { color: #c62828; }
+.pd-empty { padding: 24px 0; color: #666; text-align: center; }
+.review-switch {
+  width: 100%;
+  margin: 16px 0 12px;
+  background: #f6f7f9;
+  border: 1px solid #e9eaee;
+  border-radius: 0;
+  display: flex;
+  padding: 0;
+  overflow: hidden;
+}
+
+.review-switch .rs-btn {
+  flex: 1;
+  padding: 14px 0;
+  border: 0;
+  background: transparent;
+  color: #7a7e87;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.review-switch .rs-btn + .rs-btn {
+  border-left: 1px solid #e9eaee;
+}
+
+.review-switch .rs-btn.active {
+  background: #fff;
+  color: #111;
+}
+
+.review-switch .rs-btn:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.pd-desc { white-space: pre-line; }
+.rs-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-weight: 600;
+}
+
+.rs-btn .rs-count {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}

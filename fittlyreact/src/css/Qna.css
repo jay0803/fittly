@@ -1,0 +1,808 @@
+.qna-wrapper {
+  background: #fff;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.qna-write-wrapper {
+  background: #fff;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.qna-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.qna-empty {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.qna-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #eee;
+}
+
+.qna-item {
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+}
+
+.qna-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.qna-head-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qna-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.qna-head-row h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+}
+
+.qna-head-row .btn.small {
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.qna-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.qna-status {
+  font-size: 13px;
+  font-weight: bold;
+  color: #fff;
+  background: #d00;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+.qna-status.wait {
+  background: #fff0f0;
+  color: #d00;
+  border: 1px solid #f1c2c2;
+}
+
+.qna-status.done {
+  background: #444;
+}
+
+.qna-body .order {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.qna-body .content {
+  max-width: 900px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.qna-date {
+  font-size: 12px;
+  color: #999;
+}
+
+.qna-footer {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.qna-btn {
+  display: inline-block;
+  width: 240px;
+  padding: 12px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.qna-btn:hover { opacity: 0.9; }
+
+.qna-filters {
+  margin-bottom: 12px;
+}
+.qna-filters button {
+  border: none;
+  background: none;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+.qna-filters button.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.period-filter {
+  display: inline-block;
+  min-width: 320px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.period-options {
+  display: flex;
+  width: 100%;
+}
+
+.period-btn {
+  flex: 1;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  border-right: 1px solid #ddd;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+.period-btn:last-child { border-right: none; }
+.period-btn.active {
+  background: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.period-actions {
+  display: flex;
+}
+.period-actions button {
+  width: 50%;
+  max-width: 180px;
+  height: 44px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.period-actions .cancel {
+  background: #aaa;
+  color: #fff;
+}
+.period-actions .apply {
+  background: #000;
+  color: #fff;
+}
+
+.qna-cat-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+.cat-btn {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.cat-btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.qna-subcat {
+  margin-bottom: 16px;
+}
+.qna-subcat select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.qna-guide {
+  font-size: 13px;
+  color: #666;
+  background: #fafafa;
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.qna-field {
+  margin-bottom: 16px;
+}
+.qna-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.qna-field textarea,
+.qna-field input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.qna-field input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.qna-field input[type="text"]:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.btn.cancel {
+  flex: 1;
+  background: #aaa;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+}
+.btn.primary,
+.btn.apply {
+  flex: 1;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.order-select {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.order-select-btn {
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.order-select-btn:hover {
+  opacity: 0.9;
+}
+
+.order-input {
+  flex: 1 !important;
+  display: inline-block !important; 
+  width: auto !important;       
+  height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.order-btn {
+  margin-left: 12px;
+  flex-shrink: 0;
+  height: 41px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.order-btn:hover {
+  opacity: 0.9;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: #fff;
+  width: 700px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 6px;
+  padding: 16px;
+}
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.order-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: #f8f8f8;
+  flex-shrink: 0;
+}
+
+.order-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 4px 0;
+}
+
+.order-info {
+  font-size: 14px;
+}
+
+.order-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-info-text .order-id {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.order-info-text .product-name {
+  font-size: 13px;
+  color: #333;
+}
+
+.order-info-text .muted {
+  font-size: 12px;
+  color: #777;
+}
+
+.order-id {
+  font-weight: bold;
+}
+.btn.small {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+.qna-lock {
+  margin-left: 6px;
+  color: #888;
+  font-size: 14px;
+}
+
+.secret-msg {
+  font-style: italic;
+  color: #666;
+  background: #f9f9f9;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.qna-detail-wrapper {
+  background: #fff;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.qna-detail-wrapper{
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.qna-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.qna-body {
+  margin-left: 28px;
+}
+
+.qna-field {
+  margin-bottom: 16px;
+}
+.qna-field strong {
+  display: inline-block;
+  width: 80px;
+  color: #333;
+}
+.qna-field div {
+  display: inline-block;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  vertical-align: top;
+  max-width: calc(100% - 90px);
+}
+
+.secret-msg {
+  background: #f9f9f9;
+  color: #666;
+  font-style: italic;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.qna-answer {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 10px 0 0 28px;
+  font-size: 13px;
+}
+
+.qna-answer .label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.qna-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 24px;
+  align-items: center;
+}
+
+.qna-actions .btn {
+  border: none;
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.qna-actions .btn.cancel {
+  background: #aaa;
+  color: #fff;
+}
+.qna-actions .btn.cancel:hover {
+  opacity: 0.9;
+}
+
+.qna-actions button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  background: #000000 !important;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.qna-actions button:hover {
+  background: #5c5c5c !important;
+}
+
+.qna-actions .danger {
+  border: 1px solid #d00;
+  color: #d00;
+}
+
+.qna-actions .danger:hover {
+  background: #d00;
+  color: #fff;
+}
+
+.qna-field select {
+  width: 100%;
+  height: 44px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23333' d='M6 8L0 0h12z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 8px;
+  cursor: pointer;
+}
+
+.qna-field select:focus {
+  border-color: #000;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 26px;
+  font-weight: 300;
+  color: #666;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.modal-close-btn:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.admin-qna-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.admin-qna-container .qna-wrapper {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 24px;
+}
+
+.admin-qna-detail {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+.qna-product-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #fafafa;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.qna-product-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.qna-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.qna-product-info .product-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #111;
+}
+
+.qna-product-info .muted {
+  font-size: 13px;
+  color: #777;
+}
+
+.qna-content-box {
+  margin-top: 8px;
+  padding: 12px 14px;
+  border-radius: 6px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #333;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.qna-preview,
+.qna-user-upload {
+  width: 160px;
+  height: 160px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.qna-user-image {
+  margin-top: 16px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.qna-user-upload {
+  max-width: 240px;
+  object-fit: cover;
+}
+
+.qna-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.qna-main {
+  flex: 1;
+}
+
+.qna-thumbnail {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.qna-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.admin-qna-container .review-image-row img:hover {
+  transform: none !important;
+}
+
+.admin-qna-container .qna-head {
+  margin-bottom: -4px !important;
+}
+
+.admin-qna-container .qna-body {
+  margin-top: -4px !important;
+}
+
+.qna-actions .btn.cancel {
+  background: #e5e5e5 !important;
+  color: #000 !important;
+  border: none !important;
+  transition: background 0.2s ease;
+}
+
+.qna-actions .btn.cancel:hover {
+  background: #d5d5d5 !important;
+  color: #000 !important;
+}
+
+.qna-actions .btn.apply {
+  background: #000 !important;
+  color: #fff !important;
+  border: none !important;
+  transition: background 0.2s ease;
+}
+
+.qna-actions .btn.apply:hover {
+  background: #5c5c5c !important;
+}
+
+.qna-actions .danger {
+  background: #ff7f7f !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.qna-actions .danger:hover {
+  background: #ff9999 !important;
+  color: #fff !important;
+}

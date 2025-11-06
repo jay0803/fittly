@@ -1,0 +1,161 @@
+:root{
+  --wrap-max: 1200px;
+  --gap: 16px;
+  --radius: 12px;
+}
+
+.admin-manage{
+  max-width: var(--wrap-max);
+  margin: 36px auto;
+  padding: 0 20px 40px;
+  color:#111;
+}
+
+.admin-manage__head{
+  display:flex; justify-content:space-between; align-items:center;
+  gap:12px;
+}
+.admin-manage__head h1{
+  font-size:24px; font-weight:800; margin:0;
+}
+.admin-manage__head-actions{ display:flex; gap:10px; }
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  height:44px; padding:0 16px; border-radius:12px;
+  border:1px solid #111; background:#000; color:#fff; font-weight:700;
+  cursor:pointer; white-space:nowrap;
+}
+.btn:disabled{ opacity:.6; cursor:not-allowed; }
+.btn.small{ height:36px; padding:0 12px; font-size:13px; }
+.btn.ghost{
+  border:1px solid #e6e9f2; background:#fff; color:#111;
+}
+.btn.ghost:hover{ background:#f8fafc; }
+.btn.primary{
+  border:1px solid transparent; background:transparent; color:#0b6cff;
+  padding:0 8px; height:auto;
+}
+.btn.primary:hover{ text-decoration:underline; }
+.btn.danger{
+  border-color:#ffd0d0; background:#ffe8e8; color:#7a1a1a;
+}
+.btn.danger:hover{ background:#ffdcdc; }
+.admin-manage__filters{
+  margin-top:14px; background:#fff;
+  border:1px solid #e6e9f2; border-radius:14px;
+  box-shadow:0 6px 18px rgba(17,24,39,.06);
+  padding:12px;
+}
+.admin-manage__filters .row{
+  display:grid; gap:10px;
+  grid-template-columns: repeat(4, minmax(180px,1fr));
+}
+@media (max-width: 1024px){
+  .admin-manage__filters .row{
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  }
+}
+.admin-manage__filters .field{ display:flex; flex-direction:column; gap:6px; }
+.admin-manage__filters .field label{ font-size:13px; color:#666; }
+.admin-manage__filters input,
+.admin-manage__filters select{
+  height:44px; padding:0 12px;
+  border:1px solid #e5e7eb; border-radius:12px; background:#fff;
+  outline:none; transition:border-color .15s ease, box-shadow .15s ease;
+}
+.admin-manage__filters input:focus,
+.admin-manage__filters select:focus{
+  border-color:#111; box-shadow:0 0 0 3px rgba(17,17,17,.08);
+}
+.field--actions{ align-self:end; display:flex; gap:8px; }
+.admin-manage__list{ margin-top:16px; }
+.admin-manage__list .scroll-wrap{ overflow:auto; }
+.grid{
+  width:100%; border-collapse:collapse; background:#fff;
+  border-radius:14px; overflow:hidden; border:1px solid #e6e9f2;
+}
+.grid th, .grid td{
+  padding:10px; border-bottom:1px solid #f0f2f7; vertical-align:middle;
+}
+.grid thead th{
+  background:#f6f7fb; color:#333; text-align:left; font-weight:700;
+}
+.grid tr:last-child td{ border-bottom:none; }
+
+.grid .thumb{
+  width:56px; height:56px; object-fit:cover; border-radius:8px; border:1px solid #eee;
+}
+.grid .cell-name .name{ font-weight:800; }
+.row-actions{ display:flex; gap:6px; }
+.strike{ text-decoration:line-through; color:#888; }
+.pager{
+  margin-top:12px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+}
+.pages{ display:flex; gap:6px; }
+.page{
+  min-width:40px; height:40px; padding:0 10px; border-radius:10px;
+  border:1px solid #e6e9f2; background:#fff; cursor:pointer; font-weight:700;
+}
+.page.active{
+  background:#1f2a44; color:#fff; border-color:#1f2a44;
+}
+
+.total{ margin-top:6px; color:#666; }
+.muted{ color:#777; }
+.error{ color:#b02a37; font-weight:700; }
+
+@media (max-width: 720px){
+  .admin-manage__head{
+    align-items:flex-start; flex-direction:column; gap:8px;
+  }
+  .btn{ height:42px; }
+  .grid .thumb{ width:48px; height:48px; }
+}
+
+@media (max-width: 900px){
+  .admin-manage__list{ overflow-x:auto; }
+}
+
+.admin-manage__filters .btn {
+  border: none !important;
+  background: #000000 !important;
+  color: #fff !important;
+  transition: background 0.2s;
+}
+
+.admin-manage__filters .btn:hover {
+  background: #5c5c5c !important;
+}
+
+.admin-manage__filters .btn.ghost {
+  background: #e5e5e5 !important;
+  color: #000 !important;
+  border: none !important;
+}
+
+.admin-manage__filters .btn.ghost:hover {
+  background: #cfcfcf !important;
+}
+
+.row-actions .btn.small:not(.danger) {
+  border: none !important;
+  background: #000000 !important;
+  color: #fff !important;
+  transition: background 0.2s;
+}
+
+.row-actions .btn.small:not(.danger):hover {
+  background: #5c5c5c !important;
+}
+
+.row-actions .btn.small.danger {
+  border: none !important;
+  background: #f44a3e !important;
+  color: #fff !important;
+  transition: background 0.2s;
+}
+
+.row-actions .btn.small.danger:hover {
+  background: #ff766b !important;
+}
+

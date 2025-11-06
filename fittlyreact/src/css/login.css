@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-login-wrap {
+  min-height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+}
+
+.auth-login-card {
+  background: #fff;
+  width: 360px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.auth-login-card h2 {
+  margin: 0;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111827;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.auth-login-card form {
+  display: flex;
+  flex-direction: column;
+  padding: 18px 20px 8px;
+  gap: 8px;
+}
+
+.auth-login-card label {
+  font-size: 13px;
+  color: #374151;
+}
+
+.auth-login-card input {
+  padding: 11px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.auth-login-card input:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.08);
+}
+
+.auth-login-card input:focus-visible {
+  outline: none;
+}
+
+.remember-row {
+  margin: 4px 0 8px;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.remember-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+.btn-primary {
+  width: 100%;
+  display: inline-block;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+  transition: transform 0.06s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #0b0b0b;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.btn-link:focus-visible {
+  outline: 3px solid rgba(17, 24, 39, 0.2);
+  outline-offset: 2px;
+}
+
+.auth-login-switch {
+  text-align: center;
+  padding: 10px 12px 4px;
+  font-size: 13px;
+  background: #fafafa;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 8px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  opacity: 0.85;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-link:hover {
+  background: rgba(0, 0, 0, 0.06);
+  opacity: 1;
+}
+
+.auth-login-switch .sep {
+  margin: 0 8px;
+  color: #9ca3af;
+}
+
+.auth-login-actions {
+  text-align: center;
+  padding: 10px 12px 16px;
+  background: #fafafa;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btn-outline {
+  display: inline-block;
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  background: #fff;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: #f8f8f8;
+  border-color: #bfc5cc;
+}
+
+.btn-compact {
+  width: 220px;
+}
+
+.login-logo {
+  display: block;
+  margin: 0 auto 26px;
+  max-width: 300px;
+  height: auto;
+}
+
+.error {
+  color: #e74c3c;
+  margin: 6px 20px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 420px) {
+  .auth-login-card {
+    width: calc(100vw - 32px);
+  }
+  .btn-compact {
+    width: 100%;
+    max-width: none;
+  }
+}

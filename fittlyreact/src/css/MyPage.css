@@ -1,0 +1,235 @@
+.mypage{min-height:100vh;background:#f8fafc;color:#111;overflow-x:hidden}
+.mypage, .mypage *{box-sizing:border-box}
+.mypage .container{
+  max-width:1200px;
+  margin:0 auto;
+  padding-top:24px;
+  padding-bottom:16px;
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right:max(16px, env(safe-area-inset-right));
+  width:100%;
+}
+.mypage .mypage-inner{display:grid;grid-template-columns:280px 1fr;gap:24px}
+.mypage .my-card{
+  background:#fff;border:1px solid #e6e9f0;border-radius:14px;
+  padding:24px;box-shadow:0 6px 18px rgba(17,24,39,.06);
+  max-width:100%;
+}
+.mypage .my-card h2{margin:0 0 16px;font-size:20px;font-weight:800}
+.mypage .my-card h3{margin:0 0 16px;font-size:20px;font-weight:800}
+.mypage .my-side .head{background:#fff;border:1px solid #e6e9f0;border-radius:14px}
+.mypage .my-hello{font-size:22px;font-weight:800}
+.mypage .my-sub{color:#6b7280;margin-top:6px;font-size:13px;margin-left: 6px;}
+.mypage .my-tabs .desktop{display:flex;flex-direction:column;gap:10px;margin-top:16px;max-width:100%}
+.mypage .my-tab{
+  text-align:left;padding:12px 14px;border-radius:12px;border:1px solid #e6e9f0;
+  background:#f9fafb;color:#111;font-weight:700;cursor:pointer;max-width:100%;
+}
+.mypage .my-tab.active{background:#fff;border-color:#111;box-shadow:0 4px 10px rgba(17,24,39,.05)}
+.mypage .my-content{display:flex;flex-direction:column;gap:20px;min-width:0}
+.mypage .my-form{display:flex;flex-direction:column;gap:16px}
+.mypage .mp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px}
+.mypage .mp-grid.onecol{grid-template-columns:1fr}
+.mypage .mp-grid .full{grid-column:1 / -1}
+.mypage .my-form label{display:flex;flex-direction:column;gap:8px;font-weight:700}
+.mypage .my-form input,
+.mypage .my-form textarea{
+  padding:12px 14px;border-radius:10px;border:1px solid #d6dae3;background:#fff;color:#111;
+  width:100%;max-width:100%;
+}
+.mypage .my-form input::placeholder,
+.mypage .my-form textarea::placeholder{color:#9aa3b2}
+.mypage .my-form input:disabled,
+.mypage .my-form textarea:disabled{opacity:.7;background:#f5f6fa}
+.mypage .my-form textarea{min-height:140px;resize:vertical}
+.mypage .my-form input:focus,
+.mypage .my-form textarea:focus{outline:none;border-color:#111;box-shadow:0 0 0 4px rgba(17,24,39,.06)}
+.mypage .form-error{color:#ef4444;font-weight:700;margin-top:6px}
+.mypage .error{background:#fff5f5;border:1px solid #fecaca;color:#b91c1c;padding:12px 14px;border-radius:10px;font-weight:700}
+.mypage .my-card button,
+.mypage .my-card input[type="button"],
+.mypage .my-card input[type="submit"] {
+   all: unset;
+   box-sizing: border-box;
+ }
+
+.mypage .btn,
+.mypage button.btn,
+.mypage button[type="button"].btn,
+.mypage button[type="submit"].btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer;
+  background:#f3f6fb;color:#111;border:1px solid transparent;user-select:none;
+}
+
+.mypage .btn.primary{background:#111;color:#fff;border-color:#111}
+.mypage .btn.danger{background:#ef4444;color:#fff;border-color:#ef4444}
+.mypage .btn:disabled{opacity:.6;cursor:not-allowed}
+.mypage .my-form button[type="submit"],
+.mypage .my-card .my-form button[type="submit"]{
+  all: unset;
+  box-sizing: border-box;
+  display:flex;align-items:center;justify-content:center;
+  width:100%;height:48px;
+  text-align:center;background:#111;color:#fff;
+  padding:12px 14px;border-radius:10px;
+  font-weight:800;cursor:pointer;border:1px solid #111;
+}
+.mypage .my-form button[type="submit"]:hover{opacity:.92}
+.mypage .my-toast{background:#111;color:#fff;padding:10px 14px;border-radius:10px}
+.mypage .my-skel,
+.mypage .empty{background:#f6f7fb;border:1px dashed #d4d9e3;color:#556;padding:16px;border-radius:12px}
+.mypage .addr-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.mypage .addr-item{background:#fff;border:1px solid #e6e9f0;border-radius:12px;padding:16px;max-width:100%}
+.mypage .addr-item .addr-head{display:flex;align-items:center;gap:8px;font-weight:800;flex-wrap:wrap}
+.mypage .badge{background:#111;color:#fff;font-size:12px;border-radius:999px;padding:2px 8px}
+.mypage .addr-actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.mypage .order-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
+.mypage .order-item{background:#fff;border:1px solid #e6e9f0;border-radius:12px;padding:16px;max-width:100%}
+.mypage .order-head{display:flex;justify-content:space-between;align-items:center;font-weight:800;gap:12px;flex-wrap:wrap}
+.mypage .order-body{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.mypage .line-actions{display:flex;gap:8px;flex-wrap:wrap}
+.mypage .muted{color:#6b7280}
+.mypage .my-content .my-card.review-container{padding:0;border:none;background:transparent;box-shadow:none;color:#111}
+.mypage .my-content .my-card.review-container>h2{
+  background:#fff;border:1px solid #e6e9f0;color:#111;padding:16px 20px;margin:0 0 16px;border-radius:14px
+}
+.mypage .my-card.addr-create,
+.mypage .my-card.addr-form-card{
+  padding:28px;border-radius:16px;border:1px solid #eaeef4;background:#fff;
+  box-shadow:0 10px 24px rgba(17,24,39,.06);max-width:100%;
+}
+.mypage .addr-create .my-form,
+.mypage .addr-form-card .my-form{gap:18px}
+.mypage .addr-create .my-form label,
+.mypage .addr-form-card .my-form label{gap:10px}
+.mypage .addr-create .my-form input:not([type="submit"]):not([type="button"]),
+.mypage .addr-form-card .my-form input:not([type="submit"]):not([type="button"]),
+.mypage .addr-create .my-form select,
+.mypage .addr-form-card .my-form select,
+.mypage .addr-create .my-form textarea,
+.mypage .addr-form-card .my-form textarea{
+  background:#f9fafb;border:1px solid #e5e7eb;color:#111;border-radius:12px;padding:14px 16px;
+  transition:border-color .15s,box-shadow .15s,background-color .15s;
+  width:100%;max-width:100%;
+}
+.mypage .addr-create .my-form input:not([type="submit"]):not([type="button"]):focus,
+.mypage .addr-form-card .my-form input:not([type="submit"]):not([type="button"]):focus,
+.mypage .addr-create .my-form select:focus,
+.mypage .addr-form-card .my-form select:focus,
+.mypage .addr-create .my-form textarea:focus,
+.mypage .addr-form-card .my-form textarea:focus{
+  outline:none;border-color:#111;box-shadow:0 0 0 4px rgba(17,24,39,.06);background:#fff
+}
+
+.mypage .addr-create .btn,
+.mypage .addr-form-card .btn{border-radius:12px;padding:12px 16px}
+.mypage .addr-create .btn.block,
+.mypage .addr-form-card .btn.block{display:block;width:100%;height:44px;border-radius:12px}
+.mypage .addr-create .my-form button:not(.btn):not([type="submit"]),
+.mypage .addr-form-card .my-form button:not(.btn):not([type="submit"]){
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 16px;border-radius:12px;
+  background:#f3f6fb;color:#111;border:1px solid #e5e7eb;
+}
+.mypage .addr-create .my-form .btn,
+.mypage .addr-form-card .my-form .btn{
+  height:46px;
+  padding:0 16px;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+
+.mypage .btn-postcode {
+  align-self: end !important;
+  height: 49px !important;
+  margin-top: 22px !important;
+}
+
+
+@media (max-width:768px){
+  .mypage .mypage-inner{grid-template-columns:1fr}
+  .mypage .container{
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right:max(12px, env(safe-area-inset-right));
+  }
+  .mypage .my-card{padding:18px}
+  .mypage .my-side .head{background:transparent;border:none;box-shadow:none;padding:0}
+  .mypage .my-tabs .desktop{display:none}
+  .mypage .my-tabs .mobile{display:block}
+  .mypage .tab-accordion summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;
+    padding:10px 14px;border:1px solid #e6e9f0;border-radius:12px;background:#fff;font-weight:800;margin-top: 12px;
+  }
+  .mypage .tab-accordion summary::-webkit-details-marker{display:none}
+  .mypage .tab-accordion .chev{margin-left:8px;color:#6b7280}
+  .mypage .tab-accordion .sheet{
+    margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:100%;
+  }
+  .mypage .tab-accordion .my-tab{
+    width:100%;padding:10px 12px;border-radius:10px;background:#f9fafb;border:1px solid #e6e9f0;white-space:nowrap;font-weight:700;
+  }
+  .mypage .tab-accordion .my-tab.active{background:#111;color:#fff;border-color:#111}
+  .mypage .mp-grid{grid-template-columns:1fr}
+}
+
+.mypage .my-form .invalid[aria-invalid="true"],
+.mypage .my-form input.invalid,
+.mypage .my-form textarea.invalid{
+  border-color:#ef4444 !important;
+  box-shadow:0 0 0 4px rgba(239,68,68,.12) !important;
+}
+
+@media (min-width:769px){
+  .mypage .my-tabs .desktop{display:flex}
+  .mypage .my-tabs .mobile{display:none}
+}
+
+@media (max-width:480px){
+  .mypage .my-hello{font-size:20px;margin-left: 6px;}
+  .mypage .my-card h2,
+  .mypage .my-card h3{font-size:18px}
+  .mypage .btn{padding:8px 12px;border-radius:10px}
+  .mypage .my-form input,
+  .mypage .my-form textarea{padding:10px 12px;border-radius:8px}
+  .mypage .addr-create .my-form .btn,
+  .mypage .addr-form-card .my-form .btn{height:42px}
+  .mypage .my-form button[type="submit"]{height:44px}
+}
+
+.mypage .addr-actions .btn{
+  background:#111;color:#fff;border:1px solid #111;
+  transition:background-color .12s ease,border-color .12s ease;
+  padding:8px 14px;height:38px;border-radius:10px;font-size:14px;line-height:1;
+}
+.mypage .addr-actions .btn.danger{background:#111;color:#fff;border-color:#111}
+.mypage .addr-actions .btn.danger:active{background:#ef4444;border-color:#ef4444}
+.mypage .addr-actions .btn:hover{background:#111;border-color:#111}
+@media (max-width:480px){
+  .mypage .addr-actions .btn{padding:8px 12px;height:36px;font-size:13px}
+}
+
+.mypage .addr-list,
+.mypage .addr-item,
+.mypage .my-card.addr-create,
+.mypage .my-card.addr-form-card{max-width:100%;overflow-x:hidden}
+.mypage .addr-item .addr-head,
+.mypage .addr-item .addr-body,
+.mypage .addr-actions{min-width:0}
+.mypage .addr-item,
+.mypage .addr-item .addr-body,
+.mypage .addr-item .addr-body *{
+  word-break:break-word;
+  overflow-wrap:anywhere;
+}
+.mypage .addr-create input,
+.mypage .addr-create select,
+.mypage .addr-create textarea,
+.mypage .addr-create button,
+.mypage .addr-form-card input,
+.mypage .addr-form-card select,
+.mypage .addr-form-card textarea,
+.mypage .addr-form-card button{min-width:0;width:100%}
+.mypage .addr-create .my-form > *:has(> input[type="text"]),
+.mypage .addr-form-card .my-form > *:has(> input[type="text"]){min-width:0}
+.mypage .addr-create .my-form > *:has(> button),
+.mypage .addr-form-card .my-form > *:has(> button){min-width:0}

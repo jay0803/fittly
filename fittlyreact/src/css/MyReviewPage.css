@@ -1,0 +1,180 @@
+.my-review-page {
+  width: 100%;
+}
+
+.my-review-page .myreview-tabs {
+  display: flex;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.my-review-page .myreview-tab {
+  flex: 1;
+  padding: 14px 0;
+  border: none;
+  background: #f8f8f8;
+  color: #444;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.my-review-page .myreview-tab.active {
+  background: #fff;
+  border-bottom: 2px solid #111;
+  color: #000;
+  font-weight: 600;
+}
+
+.my-review-page .myreview-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.my-review-page .myreview-thumb {
+  width: 80px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.my-review-page .myreview-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.my-review-page .myreview-brand {
+  font-weight: 600;
+  color: #111;
+}
+
+.my-review-page .myreview-name {
+  color: #333;
+  font-size: 14px;
+}
+
+.my-review-page .myreview-date {
+  color: #888;
+  font-size: 13px;
+}
+
+.my-review-page .myreview-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.my-review-page .myreview-btn:hover {
+  background: #f1f1f1;
+}
+
+.review-writeable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fff;
+  transition: box-shadow 0.2s;
+}
+
+.review-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.review-card .review-thumb {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.review-card .review-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.review-card .review-name {
+  font-weight: 600;
+  color: #111;
+  font-size: 15px;
+}
+
+.review-card .review-meta {
+  color: #666;
+  font-size: 13px;
+}
+
+.review-card .review-date {
+  color: #999;
+  font-size: 12px;
+}
+
+.review-card .write-btn {
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.review-card .write-btn:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.review-card .write-btn:active {
+  background: #000;
+  border-color: #000;
+}
+
+.review-card .review-size,
+.review-card .review-color {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.review-card .review-name {
+  font-weight: 900;
+  color: #111;
+  font-size: 15px;
+}
+
+.review-card .review-meta,
+.review-card .review-size,
+.review-card .review-color,
+.review-card .review-date {
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.review-card .review-info {
+  gap: 1px;
+}

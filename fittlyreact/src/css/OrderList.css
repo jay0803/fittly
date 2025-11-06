@@ -1,0 +1,101 @@
+:root {
+  --bg-page: #f8fafc;
+  --bg-card: #ffffff;
+  --text: #111111;
+  --muted: #6b7280;
+  --border: #e6e9f0;
+  --shadow: 0 6px 18px rgba(17,24,39,.06);
+  --primary: #111111;
+  --primary-ink: #ffffff;
+}
+
+.order-row {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 14px 12px;
+}
+
+.order-main {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.order-row .info .title {
+  font-weight: 900;
+  margin: 0 0 6px;
+}
+.order-row .info .meta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 13px;
+}
+.order-row .muted { color: var(--muted); }
+.order-row .dot {
+  width: 3px;
+  height: 3px;
+  background: #d1d5db;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.order-row .summary { 
+  text-align: right; 
+  min-width: 150px; 
+}
+.order-row .summary .amount { 
+  font-weight: 900; 
+}
+.order-row .summary .count { 
+  color: var(--muted); 
+  font-size: 13px; 
+}
+
+.order-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.order-actions .ord-btn {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: all 0.2s ease;
+}
+
+.order-actions .ord-btn:hover,
+.order-actions .ord-btn:focus-visible {
+  background: var(--primary);
+  color: var(--primary-ink);
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.order-actions .ord-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 480px) {
+  .order-actions .ord-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}

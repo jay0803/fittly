@@ -1,0 +1,14 @@
+:root{
+  --content-max: 1200px;
+  --gap: 16px;
+  --radius: 16px;
+}
+
+.container{
+  width: min(100% - 24px, var(--content-max));
+  margin-inline: auto;
+}
+
+h1{ font-size: clamp(20px, 2.4vw, 32px); }
+h2{ font-size: clamp(18px, 2vw, 24px); }
+p, input, button, select, textarea{ font-size: clamp(14px, 1.8vw, 16px); }

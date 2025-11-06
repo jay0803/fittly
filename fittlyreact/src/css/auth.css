@@ -1,0 +1,10 @@
+.auth-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center}
+.auth-card{width:360px}
+.auth-card h2{margin:0 0 16px 0}
+.auth-card form{display:flex;flex-direction:column;gap:8px}
+.auth-card input{padding:10px;border:1px solid #ddd;border-radius:10px}
+.auth-card button{padding:12px;border-radius:12px;background:#000;color:#fff}
+.auth-card .error{color:#ef4444;font-size:13px;margin-top:8px}
+.auth-switch{margin-top:12px}
+.topbar{display:flex;gap:12px;padding:10px;border-bottom:1px solid #eee}
+.topbar .right{margin-left:auto;display:flex;gap:8px}

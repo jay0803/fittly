@@ -1,0 +1,211 @@
+
+:root{
+  --bg:#f3f4f6;
+  --card-bg:#ffffff;                /* 더 선명하게 */
+  --text:#0f172a;
+  --muted:#334155;
+  --border:#94a3b8;                 /* 굵고 진한 라인 색 */
+  --border-strong:#64748b;
+  --primary:#111111;
+  --primary-hover:#000000;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(2,6,23,.12);
+  --chip:#f8fafc;
+  --chip-hover:#e2e8f0;
+}
+
+.ai-wrap{max-width:1100px;margin:0 auto;padding:24px 20px 56px}
+.brand{display:inline-block;margin-bottom:12px}
+.login-logo{height:22px;opacity:.95}
+.ai-title{font-size:24px;font-weight:800;letter-spacing:-.02em;margin:8px 0 18px;color:var(--text)}
+.ai-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
+
+.ai-card{
+  background:var(--card-bg);
+  border:2px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:16px;
+}
+
+/* 기본 요소들이 ai-stylist.css와 공통이면, 해당 파일을 함께 import 하거나
+   동일한 클래스의 강한 보더만 여기서 보강해도 됩니다. */
+.img-preview{border:2px dashed var(--border-strong)}
+.chat-output{border:2px solid var(--border)}
+.msg .bubble{border:2px solid var(--border)}
+.msg.assistant .bubble{border-color:var(--border-strong)}
+.chip{border:2px solid var(--border)}
+.prompt-row input{border:2px solid var(--border)}
+.tryon{border-top:2px solid var(--border-strong)}
+.tryon-stage{border:2px dashed var(--border-strong)}
+.sc-outfit-price{border-top:2px dashed var(--border-strong)} /* 호환용 */
+
+/* ===================== TAG OVERRIDES (HIGHEST PRIORITY) ===================== */
+/* → paste at the BOTTOM of ai-vision.css and ai-stylist.css */
+
+/* 칩 공통 스타일 */
+body .ai-vision-page .popular-tags a.tag,
+body .ai-vision-page .category-tags .tag,
+body .ai-vision-page .tag-chip,
+body .ai-stylist-page .popular-tags a.tag,
+body .ai-stylist-page .category-tags .tag,
+body .ai-stylist-page .tag-chip {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 8px 12px !important;
+  margin: 6px 8px 0 0 !important;
+  border-radius: 9999px !important;
+  background: #f1f5f9 !important;         /* 밝은 칩 배경 */
+  border: 1px solid #cbd5e1 !important;    /* 옅은 테두리 */
+  color: #111827 !important;               /* 가독성 좋은 글자색 */
+  font-size: 14px !important;
+  line-height: 1 !important;
+  text-decoration: none !important;        /* 파란 밑줄 제거 */
+  white-space: nowrap !important;
+  cursor: pointer !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 링크 상태 통일 */
+body .ai-vision-page .popular-tags a.tag:link,
+body .ai-vision-page .popular-tags a.tag:visited,
+body .ai-vision-page .popular-tags a.tag:active,
+body .ai-stylist-page .popular-tags a.tag:link,
+body .ai-stylist-page .popular-tags a.tag:visited,
+body .ai-stylist-page .popular-tags a.tag:active {
+  color: #111827 !important;
+  text-decoration: none !important;
+}
+
+/* hover/active */
+body .ai-vision-page .popular-tags a.tag:hover,
+body .ai-vision-page .category-tags .tag:hover,
+body .ai-stylist-page .popular-tags a.tag:hover,
+body .ai-stylist-page .category-tags .tag:hover {
+  background: #e2e8f0 !important;
+  border-color: #b9bec8 !important;
+}
+
+body .ai-vision-page .popular-tags,
+body .ai-stylist-page .popular-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin-top: 8px !important;
+}
+
+/* 상단 카테고리 버튼(원형 칩)도 확실히 덮어쓰기 */
+body .ai-vision-page .category-tabs .chip,
+body .ai-stylist-page .category-tabs .chip {
+  background: #ffffff !important;
+  border: 2px solid #cbd5e1 !important;
+  color: #111827 !important;
+  border-radius: 9999px !important;
+  padding: 10px 16px !important;
+  font-weight: 600 !important;
+}
+body .ai-vision-page .category-tabs .chip:hover,
+body .ai-stylist-page .category-tabs .chip:hover {
+  background: #f8fafc !important;
+  border-color: #94a3b8 !important;
+}
+
+/* ===================== TAGS: Button-like chips for popular & AI tags ===================== */
+/* 현재 마크업(.ai-wrap .tag-bar .tag-bar-list a.tag-link / button.tag-btn)에 맞춘 스타일 */
+
+.ai-wrap .tag-bar .tag-bar-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* 앵커/버튼 공통 칩 스타일 */
+.ai-wrap a.tag-link,
+.ai-wrap button.tag-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  color: #111827;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background .15s ease,
+    border-color .15s ease,
+    transform .08s ease,
+    box-shadow .12s ease;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+}
+
+/* 링크 상태(파란색/밑줄 제거) */
+.ai-wrap a.tag-link:link,
+.ai-wrap a.tag-link:visited,
+.ai-wrap a.tag-link:active {
+  color: #111827;
+  text-decoration: none;
+}
+
+/* hover / active / focus */
+.ai-wrap a.tag-link:hover,
+.ai-wrap button.tag-btn:hover {
+  background: #e2e8f0;
+  border-color: #94a3b8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+.ai-wrap a.tag-link:active,
+.ai-wrap button.tag-btn:active {
+  transform: translateY(0);
+}
+.ai-wrap a.tag-link:focus-visible,
+.ai-wrap button.tag-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(148,163,184,.35);
+}
+
+/* 변형: 강조/약함 */
+.ai-wrap a.tag-link.strong,
+.ai-wrap button.tag-btn.strong {
+  background: #ffffff;
+  border-color: #64748b;
+}
+.ai-wrap a.tag-link.tag-weak,
+.ai-wrap button.tag-btn.tag-weak {
+  background: #f8fafc;
+  border-color: #d1d5db;
+  color: #374151;
+}
+
+/* 해시태그 안보이게 하고 싶으면 주석 해제
+.ai-wrap a.tag-link::before,
+.ai-wrap button.tag-btn::before { content: "#"; margin-right: 2px; color: #6b7280; }
+*/
+
+/* 태그 바 제목과의 간격 정리(있다면) */
+.ai-wrap .tag-bar .tag-bar-title {
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+/* AI 추천 키워드도 버튼처럼 */
+.ai-wrap .tag-bar.soft .tag-bar-list button.tag-btn,
+.ai-wrap .tag-bar.soft .tag-bar-list a.tag-link {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+/* 프로덕트/특수 태그(.tag, .tag-prod)를 그대로 쓰는 구역과 충돌 방지 */
+.ai-wrap a.tag-link.tag,
+.ai-wrap button.tag-btn.tag { /* no-op: 우선순위 확보용 */ }
+
+

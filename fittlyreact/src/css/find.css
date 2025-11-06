@@ -1,0 +1,101 @@
+.auth-find-wrap {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: transparent;
+}
+
+.auth-find-card {
+  width: 520px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.find-header {
+  padding: 18px 22px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.find-body {
+  padding: 22px;
+}
+
+.find-form label {
+  display: block;
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+.find-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  outline: none;
+  transition: box-shadow .15s ease, border-color .15s ease;
+  background: #fff;
+}
+.find-form input:focus {
+  border-color: #cfcfcf;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.06);
+}
+
+.find-msg { margin-top: 8px; font-size: .92rem; }
+.find-msg.error { color: #d93025; }
+.find-msg.ok { color: #0b8f3a; }
+.find-actions { margin-top: 14px; display: flex; justify-content: center; }
+.find-actions .btn-primary {
+  width: 320px;
+}
+
+.find-footer {
+  padding: 0 22px 22px;
+  display: flex;
+  justify-content: center;
+}
+.find-footer .btn-outline {
+  width: 320px;
+  text-align: center;
+}
+
+.find-email-row,
+.find-otp-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.auth-find-card .find-form .find-email-row .btn-primary,
+.auth-find-card .find-form .find-email-row .btn-ghost,
+.auth-find-card .find-form .find-otp-row .btn-primary,
+.auth-find-card .find-form .find-otp-row .btn-ghost {
+  width: auto;
+}
+
+.find-email-row .send-btn,
+.find-otp-row .otp-btn {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.find-otp-row .otp-input {
+  flex: 1;
+  height: 44px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+@media (min-width: 480px) {
+  .find-email-row, .find-otp-row { gap: 10px; }
+}

@@ -1,0 +1,243 @@
+.rf-wrap { width: 100%; }
+
+.rf-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rf-btn {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+  padding: 8px 11px;
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  transition: border-color .15s ease, box-shadow .15s ease, color .15s ease;
+}
+.rf-btn:hover { border-color: #d8d8d8; }
+.rf-btn.active {
+  border-color: #111;
+  box-shadow: 0 0 0 1px #111 inset;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+}
+.filter-btn i { font-size: 16px; color: #222; }
+.filter-btn:hover i { color: #000; }
+.rf-selected {
+  margin-top: 10px;
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rf-chip-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.rf-placeholder { color: #6b7280; font-size: 14px; }
+.rf-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: transparent;
+  border: none;
+  color: #111;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 0;
+}
+
+.rf-chip-x {
+  border: none;
+  background: none;
+  color: #777;
+  font-size: 18px;
+  margin-left: -6px;
+  cursor: pointer;
+  transition: color 0.2s;
+  position: relative;
+  top: 2px;
+}
+.rf-chip-x:hover { color: #000; }
+.rf-reset {
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 2px;
+}
+.rf-reset:hover { color: #374151; }
+.rf-divider {
+  height: 1px;
+  background: #ececec;
+  margin-top: 12px;
+}
+
+.rf-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.rf-modal {
+  width: min(500px, 92vw);
+  max-height: 90vh;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+.rf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+.rf-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.rf-modal-close {
+  border: 0;
+  background: transparent;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.rf-modal-tabs {
+  display: flex;
+  gap: 16px;
+  padding: 0 20px 8px 20px;
+}
+.rf-modal-tab {
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 6px;
+}
+.rf-modal-tab.active {
+  color: #111;
+  font-weight: 700;
+  border-bottom: 3px solid #111;
+}
+
+.rf-modal-sep { height: 1px; background: #e6e6e6; }
+.rf-modal-body {
+  padding: 20px;
+  overflow: auto;
+}
+
+.rf-modal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 48px;
+}
+.rf-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #333;
+}
+.rf-check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.rf-modal-footer {
+  padding: 16px 20px 20px;
+  border-top: 1px solid #efefef;
+}
+.rf-apply-btn {
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border: 0;
+  cursor: pointer;
+}
+.rf-apply-btn:hover { filter: brightness(1.05); }
+.rf-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px 4px;
+}
+.rf-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+.rf-input-row input {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+}
+.rf-input-row span {
+  color: #555;
+  font-size: 14px;
+}
+.rf-label {
+  width: 90px;
+  color: #444;
+  font-weight: 500;
+  font-size: 14px;
+}
+.rf-apply-btn-mini {
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.rf-apply-btn-mini:hover {
+  background: #333;
+}
+
+@media (max-width: 640px) {
+  .rf-row { gap: 8px; }
+  .rf-btn { padding: 9px 12px; font-size: 14px; }
+  .rf-selected { padding: 10px 12px; }
+  .rf-modal { width: 94vw; }
+  .rf-modal-grid { gap: 14px 28px; }
+}
+
+.rf-input-row input:last-of-type {
+  margin-right: 8px;
+}

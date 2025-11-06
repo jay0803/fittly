@@ -1,0 +1,91 @@
+.adminlist-wrap {
+  padding: 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+.list-header h2 { margin: 0; }
+.search-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.search-bar select,
+.search-bar input,
+.search-bar button {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+}
+.search-bar input { flex: 1; }
+.sort-label { display: inline-flex; align-items: center; gap: 6px; }
+
+@media (max-width: 640px) {
+  .search-bar { flex-wrap: wrap; }
+  .search-bar input { flex: 100%; }
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.user-table thead { background: #000000; }
+.user-table th {
+  text-align: left;
+  padding: 12px 10px;
+  font-weight: 700;
+  color: #fff;
+  border-bottom: 2px solid #e9ebf0;
+}
+.user-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid #f1f2f6;
+  color: #444;
+}
+.user-table tbody tr:nth-child(even) { background: #fafafa; }
+.user-table tbody tr:hover { background: #f0f8ff; }
+.user-table td.num { width: 64px; text-align: center; color: #666; }
+.user-table td.name { font-weight: 600; }
+.user-table td.date { white-space: nowrap; }
+.user-table .no-data { text-align: center; padding: 20px; color: #999; }
+.pager {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+}
+.pager button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+.pager button:disabled { opacity: .4; cursor: not-allowed; }
+
+.search-bar button {
+  padding: 8px;
+  border: 1px solid #1e40af;
+  border-radius: 8px;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-bar button:hover {
+  background: #5c5c5c;
+}

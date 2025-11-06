@@ -1,0 +1,92 @@
+.admin-hub {
+  max-width: 1080px;
+  margin: 40px auto;
+  padding: 0 20px 36px;
+}
+.admin-hub__header { margin-bottom: 16px; }
+.admin-hub__title { font-size: 28px; font-weight: 800; margin: 0 0 6px; }
+.admin-hub__subtitle { color: #555; margin: 0; }
+.admin-hub__notice {
+  background: #fff3cd;
+  border: 1px solid #ffe69c;
+  color: #7a5d00;
+  padding: 10px 12px;
+  border-radius: 10px;
+  margin: 14px 0 6px;
+  font-weight: 600;
+}
+.admin-hub__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.admin-hub__card {
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.04);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.admin-hub__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+}
+.admin-hub__card-body { padding: 18px 18px 20px; }
+.admin-hub__card-title { font-size: 18px; font-weight: 800; margin: 0 0 8px; }
+.admin-hub__card-desc { color: #666; margin: 0 0 14px; min-height: 42px; }
+.admin-hub__btn {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+.admin-hub__btn:hover { background: #5c5c5c; }
+.admin-hub__quickrow {
+  display: flex;
+  gap: 8px;
+}
+.admin-hub__input {
+  flex: 1;
+  height: 40px;
+  border: 1px solid #e6e9f2;
+  border-radius: 12px;
+  padding: 0 12px;
+}
+.admin-hub__latest { margin-top: 28px; }
+.admin-hub__latest-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.admin-hub__link { color: #3b5bdb; font-weight: 700; text-decoration: none; }
+
+.admin-hub__latest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.admin-hub__latest-card {
+  text-align: left;
+  border: 1px solid #eee;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+}
+.admin-hub__latest-card img {
+  width: 100%; height: 160px; object-fit: cover; display: block;
+}
+.admin-hub__latest-info { padding: 10px 12px; }
+.admin-hub__latest-name { font-weight: 800; }
+.admin-hub__latest-brand { color: #666; font-size: 13px; margin: 2px 0 6px; }
+.admin-hub__latest-price .strike { text-decoration: line-through; color: #999; margin-right: 6px; }
+.admin-hub__muted { color: #777; }
+.admin-hub__error { color: #b02a37; font-weight: 700; }
